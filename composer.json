@@ -1,0 +1,69 @@
+{
+  "name": "vvb13a/laravel-model-checker",
+  "description": "Check Eloquent models by running checks on their associated URLs using laravel-response-checker.",
+  "keywords": [
+    "laravel",
+    "checking",
+    "eloquent",
+    "health",
+    "uptime",
+    "response",
+    "checker"
+  ],
+  "homepage": "https://github.com/vvb13a/laravel-model-checker",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "vvb13a",
+      "email": "vvb@wiot-tomorrow.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^8.2",
+    "illuminate/support": "^10.0|^11.0|^12.0",
+    "illuminate/database": "^10.0|^11.0|^12.0",
+    "illuminate/queue": "^10.0|^11.0|^12.0",
+    "illuminate/console": "^10.0|^11.0|^12.0",
+    "illuminate/http": "^10.0|^11.0|^12.0",
+    "spatie/laravel-package-tools": "^1.16",
+    "vvb13a/laravel-response-checker": "dev-main"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^7.0|^8.0|^9.0",
+    "phpunit/phpunit": "^9.6|^10.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Vvb13a\\LaravelModelChecker\\": "src/"
+    }
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/vvb13a/laravel-response-checker.git"
+    }
+  ],
+  "autoload-dev": {
+    "psr-4": {
+      "Vvb13a\\LaravelModelChecker\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
+    "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "ModelCheckerServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
