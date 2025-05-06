@@ -7,7 +7,7 @@ use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Vvb13a\LaravelModelChecker\Commands\CheckModelCommand;
 use Vvb13a\LaravelModelChecker\Commands\CheckModelsCommand;
 
-class ModelCheckerServiceProvider extends PackageServiceProvider
+class LaravelModelCheckerServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
