@@ -16,6 +16,7 @@ class Finding extends Model
         'level' => FindingLevel::class,
         'details' => 'array',
         'configuration' => 'array',
+        'created_at' => 'datetime',
     ];
 
     public function checkable(): MorphTo
