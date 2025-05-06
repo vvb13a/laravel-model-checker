@@ -22,7 +22,7 @@ return new class extends Migration {
             $table->json('details')->nullable();
             $table->json('configuration')->nullable();
 
-            $table->timestamp('created_at');
+            $table->timestamps();
         });
     }
 

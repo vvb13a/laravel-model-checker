@@ -9,14 +9,12 @@ use Vvb13a\LaravelResponseChecker\Enums\FindingLevel;
 class Finding extends Model
 {
     protected $table = 'checkable_findings';
-
     protected $guarded = ['id'];
 
     protected $casts = [
         'level' => FindingLevel::class,
         'details' => 'array',
         'configuration' => 'array',
-        'created_at' => 'datetime',
     ];
 
     public function checkable(): MorphTo
