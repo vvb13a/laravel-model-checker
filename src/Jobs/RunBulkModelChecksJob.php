@@ -30,7 +30,7 @@ class RunBulkModelChecksJob implements ShouldQueue, ShouldBeUnique
     public function __construct(public string $modelClass, public ?FindingLevel $level = null)
     {
         $this->onConnection(Config::get('model-checker.queue_connection'));
-        $this->onQueue(Config::get('model-checker.bulk_queue_name', 'default'));
+        $this->onQueue(Config::get('model-checker.queue_name'));
     }
 
     /**

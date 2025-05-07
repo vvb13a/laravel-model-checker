@@ -3,7 +3,6 @@
 use Vvb13a\LaravelResponseChecker\Checks;
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Default Checks
@@ -19,6 +18,7 @@ return [
         Checks\TitleCheck::class,
         Checks\MetaDescriptionCheck::class,
         Checks\ImageAltTextCheck::class,
+        Checks\H1Check::class
     ],
 
     /*
@@ -42,7 +42,7 @@ return [
     | dispatched to. Use null to use the default queue connection.
     |
     */
-    'queue_name' => env('RESPONSE_CHECKER_QUEUE', 'default'),
+    'queue_name' => env('MODEL_CHECKER_QUEUE_NAME', 'default'),
 
     /*
     |--------------------------------------------------------------------------
@@ -53,7 +53,7 @@ return [
     | dispatched to. Use null to use the default queue connection.
     |
     */
-    'queue_connection' => env('RESPONSE_CHECKER_QUEUE_CONNECTION', null),
+    'queue_connection' => env('MODEL_CHECKER_QUEUE_CONNECTION', null),
 
     /*
      |--------------------------------------------------------------------------

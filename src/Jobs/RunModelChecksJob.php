@@ -42,7 +42,7 @@ class RunModelChecksJob implements ShouldQueue
         public string $modelClass
     ) {
         $this->onConnection(Config::get('model-checker.queue_connection'));
-        $this->onQueue(Config::get('model-checker.queue_name', 'default'));
+        $this->onQueue(Config::get('model-checker.queue_name'));
     }
 
     /**
